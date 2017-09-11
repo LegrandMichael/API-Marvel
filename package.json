@@ -1,0 +1,27 @@
+{
+  "name": "API-Marvel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "blueimp-md5": "^2.10.0",
+    "bootstrap": "^3.3.7",
+    "css": "^2.2.1",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LegrandMichael/API-Marvel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LegrandMichael/API-Marvel/issues"
+  },
+  "homepage": "https://github.com/LegrandMichael/API-Marvel#readme"
+}
