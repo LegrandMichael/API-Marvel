@@ -9,7 +9,9 @@
     "css": "^2.2.1",
     "express-paginate": "^0.3.0",
     "jquery": "^3.2.1",
-    "koa-ctx-paginate": "0.0.2"
+    "koa-ctx-paginate": "0.0.2",
+    "list": "^1.0.0",
+    "list.js": "^1.5.0"
   },
   "devDependencies": {},
   "scripts": {
