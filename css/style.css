@@ -5,3 +5,8 @@
     vertical-align: center;
     align-content: center;
 }
+
+.pagination li {
+    display: inline-block;
+    padding: 5px;
+}
