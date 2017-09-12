@@ -8,7 +8,8 @@
     "bootstrap": "^3.3.7",
     "css": "^2.2.1",
     "express-paginate": "^0.3.0",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "koa-ctx-paginate": "0.0.2"
   },
   "devDependencies": {},
   "scripts": {
