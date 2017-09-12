@@ -10,15 +10,29 @@ $(".btn").click(function(){
     $.ajax({
         url: 'http://gateway.marvel.com/v1/public/characters?limit=100&nameStartsWith=' + buttonContent + '&ts=1&apikey=' + pubKey + '&hash=' + hash,
         success: function(data) {
-            console.log(data);
+            $("#tableHeroes").empty();
             var html = "";
-            var length = data.data.results.length;
+            var tab = data.data.results;
+            var length = tab.length;
             for (var i = 0; i < length;i++) {
-                html += $('.table').append('<tr>'+'<td class="text-center">'+data.data.results[i].id+'</td>'+'<td class="text-center align-center"><img class="thumbnail" src="'+data.data.results[i].thumbnail.path+'.'+data.data.results[i].thumbnail.extension+'"/></td><td class="text-center">'+data.data.results[i].name+'</td></tr>');
+                html += $('#tableHeroes').append('<tr class="heroes"><td class="text-center">'+tab[i].id+'</td>\
+                <td class="text-center align-center"><img class="thumbnail" src="'+tab[i].thumbnail.path+'.'+tab[i].thumbnail.extension+'"/></td>\
+                <td class="text-center">'+tab[i].name+'</td>\
+                <td class="text-center">'+tab[i].description+'</td>\
+                <td class="text-center">'+tab[i].comics.available+'</td>\
+                <td class="text-center">'+tab[i].stories.available+'</td>\
+                <td class="text-center">'+tab[i].series.available+'</td></tr>');
             }
+            var heroesPagination = new List('heroesList', {
+                valueNames: ['heroes'],
+                page: 5,
+                pagination: true
+            });
+
         },
         error: function() {
             console.log('Nope');
         }
     })
 });
+
