@@ -2,13 +2,14 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>API Marvel</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>API Marvel</title>
 </head>
 
-<body>
+<body class="text-center">
     <div class="container"><br \>
         <div class="row">
             <div class="col-sm-12">
@@ -16,7 +17,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 text-center">
+            <div id="btn" class="text-center">
                 <div id="btngr" class="btn btn-group btn-info" role="group" aria-label="#">#</div>
                 <div id="A" class="btn btn-group btn-info" role="group" aria-label="A">A</div>
                 <div id="B" class="btn btn-group btn-info" role="group" aria-label="B">B</div>
@@ -46,37 +47,38 @@
                 <div id="Z" class="btn btn-group btn-info" role="group" aria-label="Z">Z</div>
             </div>
         </div><br \>
+    </div>
+    <div class="container">
         <div class="panel panel-default">
             <!-- Default panel contents -->
             <div class="panel-heading text-center">Heroes List</div>
             <div class="panel-body">
-                <!-- Table -->
-                <table class="table table-responsive table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Id</th>
-                            <th class="text-center">Thumbnail</th>
-                            <th class="text-center">Name</th>
-                            <!-- <th>Description</th>
-                            <th>Comics</th>
-                            <th>Stories</th>
-                            <th>Series</th> -->
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
+                <div class="container id=heroesList col-sm-12">
+                    <!-- Table -->
+                    <table class="table table-responsive table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Id</th>
+                                <th class="text-center">Thumbnail</th>
+                                <th class="text-center">Name</th>
+                                <th class="text-center">Description</th>
+                                <th class="text-center">Comics</th>
+                                <th class="text-center">Stories</th>
+                                <th class="text-center">Series</th>
+                            </tr>
+                        </thead>
+                        <tbody id ="tableHeroes" class="list">
+                        </tbody>
+                    </table>
+                    <ul class="pagination"></ul>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="text-right">
-            <ul class="pagination"></ul>
+        <!-- End Default panel contents -->     
         </div>
     </div>
     <script src="node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
     <script src="node_modules/blueimp-md5/js/md5.js"></script>
+    <script src="node_modules/list.js/dist/list.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
     <script src="js/app.js" charset="utf-8"></script>
 </body>
